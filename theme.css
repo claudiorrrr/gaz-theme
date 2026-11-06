@@ -1,0 +1,305 @@
+/*
+ * Light Theme for Gazelle Games
+ * Overlay: imports the site base, then overrides palette and icons.
+ */
+@import url("https://gazellegames.net/static/styles/game_room/style.css");
+
+/* Palette: remap the base theme variables to a light scheme */
+:root {
+  --darkBlue:       #f6f8fa;
+  --darkBlue80:     rgba(246, 248, 250, .80);
+  --darkBlue50:     rgba(246, 248, 250, .50);
+  --darkBlue2:      #eceff3;
+
+  --mediumBlue:     #e4e8ec;
+  --mediumBlue90:   rgba(228, 232, 236, .90);
+  --mediumBlue50:   rgba(228, 232, 236, .50);
+
+  --lightBlue:      #666;
+  --lightBlue30:    rgba(102, 102, 102, .30);
+
+  --darkGreen:      #418b00;
+  --darkGreen60:    rgba(65, 139, 0, .60);
+  --lightGreen:     #74c42e;
+
+  --stickyBkg:      #e9f3dc;
+  --label:          #f6f8fa;
+
+  --rowa:           #fbfbfb;
+  --rowb:           #fff;
+  --rowA60:         #fbfbfb;
+  --rowB60:         #fff;
+  --rowAHover:      #eee;
+  --rowBHover:      #eee;
+
+  --white:          #444;
+  --grey:           #777;
+}
+
+/* Page */
+body {
+  background-image: url("https://i.imgur.com/l9MIQdh.png");
+  background-size: auto;
+  background-attachment: scroll;
+  color: #444;
+}
+
+body #content {
+  background: #fff;
+}
+
+body a {
+  color: #666;
+}
+
+body a:hover {
+  color: #777;
+  text-decoration: underline;
+}
+
+/* Logo */
+body #logo, body #logo.power_logo, body #logo.power_logo2, body #logo.power_logo3 {
+  background: url("https://i.imgur.com/wcBbYEL.png") no-repeat center center;
+  background-size: contain;
+}
+
+/* Boxes, tables, headers */
+body .box {
+  background: #fff;
+  border: 1px solid #f4f4f4;
+}
+
+body .head, body .colhead, body .colhead_dark {
+  background: #f6f8fa;
+  color: #444;
+}
+
+body table, body tr, body td, body th {
+  border-color: #f4f4f4;
+}
+
+body blockquote {
+  background: #fbfbfb;
+  border: 1px dashed #666;
+}
+
+body input, body select, body textarea, body button {
+  background-color: #fbfbfb;
+  color: #555;
+  border: 1px solid #f4f4f4;
+}
+
+/* Ratio colors */
+.r00 { color: #ff0000; }
+.r01, .r02 { color: #ff1300; }
+.r03 { color: #ff2600; }
+.r04 { color: #ff4c00; }
+.r05, .r06 { color: #ff5e00; }
+.r07 { color: #ff7100; }
+.r08 { color: #ff9700; }
+.r09 { color: #ffaa00; }
+.r10 { color: #74c42e; }
+.r20, .r50, .r99 { color: #418b00; }
+
+/* Category icons (only the ones that exist in the base) */
+body .cats_applications {
+  background-image: url("https://i.imgur.com/jb6EKxH.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body .cats_ost {
+  background-image: url("https://svgshare.com/i/15Pe.svg");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Seeders / leechers / snatched icons */
+img[src*="snatched.png"] {
+  width: 0;
+  height: 14px;
+  padding-right: 25px;
+  background: transparent url("https://i.imgur.com/LRM6hQG.png") top no-repeat;
+  background-size: 15px 15px;
+}
+
+img[src*="leechers.png"] {
+  width: 0;
+  height: 15px;
+  padding-right: 20px;
+  background: transparent url("https://i.imgur.com/u7NdhED.png") top no-repeat;
+  background-size: 18px 18px;
+}
+
+img[src*="seeders.png"] {
+  width: 0;
+  height: 15px;
+  padding-right: 20px;
+  background: transparent url("https://i.imgur.com/uOV5lYx.png") top no-repeat;
+  background-size: 18px 18px;
+}
+
+/* Forum topic icons */
+body .last_read {
+  background: url("https://svgshare.com/i/ujB.svg") no-repeat center center;
+  background-size: 15px 15px;
+  text-indent: -9999px;
+  opacity: .7;
+}
+
+#forums #content .thin td.read,
+#forums #content .thin td.unread,
+#forums #content .thin td.read_sticky,
+#forums #content .thin td.unread_sticky,
+#forums #content .thin td.read_locked,
+#forums #content .thin td.unread_locked,
+#forums #content .thin td.read_locked_sticky,
+#forums #content .thin td.unread_locked_sticky {
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#forums #content .thin td.read {
+  background-image: url("https://www.svgrepo.com/show/496623/sms.svg");
+}
+
+#forums #content .thin td.unread {
+  background-image: url("https://www.svgrepo.com/show/496625/sms-notification.svg");
+}
+
+#forums #content .thin td.read_sticky {
+  background-image: url("https://svgur.com/i/t7f.svg");
+}
+
+#forums #content .thin td.unread_sticky {
+  background-image: url("https://www.svgrepo.com/show/496629/sms-star.svg");
+}
+
+#forums #content .thin td.read_locked,
+#forums #content .thin td.unread_locked {
+  background-image: url("https://i.imgur.com/73rGOis.png");
+}
+
+#forums #content .thin td.read_locked_sticky,
+#forums #content .thin td.unread_locked_sticky {
+  background-image: url("https://svgur.com/i/t7P.svg");
+}
+
+/* "New post" badge */
+.forum_post.forum_unread .colhead_dark td:before {
+  content: "New post";
+  background-color: #7caa47;
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin-left: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Post action icons (quote, edit, report, sticky) */
+#forums [onclick*="Quote('"],
+#forums [onclick*="Edit_Form"],
+#forums [onclick*="reports('"],
+#forums a.brackets[href*="forums.php?action=sticky_post"] {
+  display: inline-block !important;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  margin: 2px;
+  height: 18px !important;
+  width: 18px !important;
+  text-indent: -9999px;
+  opacity: .8 !important;
+}
+
+#forums [onclick*="Quote('"] {
+  background-image: url("https://www.svgrepo.com/show/496498/quote-up-circle.svg");
+}
+
+#forums [onclick*="Edit_Form"] {
+  background-image: url("https://www.svgrepo.com/show/496153/edit.svg");
+}
+
+#forums [onclick*="reports('"] {
+  background-image: url("https://www.svgrepo.com/show/496687/trash.svg");
+}
+
+#forums a.brackets[href*="forums.php?action=sticky_post"] {
+  background-image: url("https://www.svgrepo.com/show/495925/attach-circle.svg") !important;
+}
+
+/* Votes */
+.small_upvote, .small_upvoted, .small_downvote, .small_downvoted {
+  display: inline-block;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  width: 15px;
+}
+
+.small_upvote, .small_upvoted {
+  background-image: url("https://www.svgrepo.com/show/496316/like-1.svg");
+}
+
+.small_downvote, .small_downvoted {
+  background-image: url("https://www.svgrepo.com/show/496129/dislike.svg");
+}
+
+.upvote, .downvote {
+  display: inline-block;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  margin: 2px;
+  height: 20px !important;
+  width: 20px !important;
+  text-indent: -9999px;
+  color: transparent !important;
+  border-bottom: none !important;
+  opacity: .8 !important;
+}
+
+.upvote {
+  background-image: url("https://www.svgrepo.com/show/496316/like-1.svg");
+}
+
+.downvote {
+  background-image: url("https://www.svgrepo.com/show/496129/dislike.svg");
+}
+
+.small_upvote:hover, .small_upvoted:hover, .small_downvote:hover,
+.small_downvoted:hover, .upvote:hover, .downvote:hover {
+  border-bottom: none;
+  text-decoration: none;
+  opacity: .7 !important;
+}
+
+#vote_message {
+  color: transparent;
+}
+
+/* Bookmarks */
+.add_bookmark a, .remove_bookmark a {
+  font-size: 0 !important;
+  margin-left: 2px;
+  position: relative;
+  top: 12px;
+  background-image: url("https://www.svgrepo.com/show/496269/heart-add.svg");
+  background-repeat: no-repeat !important;
+  background-size: 18px 18px;
+  height: 0;
+  padding: 9px;
+  width: 0;
+  opacity: .5;
+}
+
+.add_bookmark a:hover, .remove_bookmark a:hover {
+  opacity: 1;
+}
+
+.remove_bookmark a {
+  background-image: url("https://www.svgrepo.com/show/496275/heart-remove.svg");
+}
